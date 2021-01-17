@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery学习 </title>
+ 
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+</head>
+<body>
+  
+     <div class="d1">
+         <ul class="u1">
+             <li>这是第一个li</li>
+             <li>这是第二个li</li>
+             <li>这是第三个li</li>
+             <li>这是第四个li</li>
+             <li>这是第五个li</li>
+         </ul>
+     </div>
+
+    
+
+     <script>
+        $(function() {
+            // 1.css方法的查看
+            console.log($('.d1').css("width"));
+            //    2.对象形式的css
+            var size = 200;
+           $('.d1').css({
+               height:size,
+               backgroundColor:"red"
+
+           })
+        })
+
+          
+
+     </script>
+</body>
+</html>

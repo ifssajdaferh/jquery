@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery学习 </title>
+ 
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+        <style>
+    /* btn{
+        
+    } */
+        </style>
+</head>
+<body>
+  
+  <button>第一个</button>
+  <button>第二个</button>
+  <button>第三个</button>
+
+    
+
+     <script>
+        $(function() {
+            
+            $('button').click(function() {
+                console.log($(this));
+                // 给全部的加
+                $(this).css('background-color','cyan')
+              //    除了点的那个全减
+              $(this).siblings().css('background-color','');
+                
+
+            })
+        
+
+        })
+     </script>
+</body>
+</html>

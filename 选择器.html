@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery学习 </title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+</head>
+<body>
+  
+     <div class="d1">
+         <ul class="u1">
+             <li>这是第一个li</li>
+             <li>这是第二个li</li>
+             <li>这是第三个li</li>
+             <li>这是第四个li</li>
+             <li>这是第五个li</li>
+         </ul>
+     </div>
+
+    
+
+     <script>
+        $(function() {
+        //    $('.d1').removeClass('d1');
+           
+            //    $('.u1 li').hide();
+        //    $('.u1').removeClass('u1');
+               console.log($('.d1'));
+                //  筛选选择器
+               $('div li').css('color','red');
+               $('.u1 li:first').css('color','white');
+               $('.u1 li:eq(3)').css('color','white');
+                //  筛选方法
+                // 父
+                $('.u1').parent().css('background-color','cyan');
+                //  子
+                $('div').children().css('border','1px solid black');
+                // 兄弟
+                $('li:first').siblings().css('color','green');
+        })
+     </script>
+</body>
+</html>

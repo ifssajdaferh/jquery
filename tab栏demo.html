@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery学习 </title>
+ 
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+        <style>
+    /* btn{
+        
+    } */
+    ul{
+        width: 50px;
+        height: 100px;
+    }
+    li{
+width: 49px;
+height: 30px;
+list-style: none;
+border: 1px solid cyan;
+text-align: center;
+line-height: 30px;
+    }
+    li a{
+        width: 49px;
+height: 30px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .d1{
+        width: 150px;
+        height: 90px;
+        border: 1px dashed black;
+       
+    }
+    .d1 div{
+        width: 150px;
+        height: 90px;
+    }
+    .d1 img{
+        width: 150px;
+        height: 90px;
+    }
+    .d1 div{
+        position: absolute;
+    }
+        </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">聚惠</a></li>
+        <li><a href="#">品优购</a></li>
+        <li><a href="#">精灵图</a></li>
+    </ul>
+    <div class="d1">
+        <div><a href="#"><img src="img/loginbg.png" alt=""></a></div>
+        <div><a href="#"><img src="img/logo.png" alt=""></a></div>
+        <div><a href="#"><img src="img/icons.png" alt=""></a>  </div>
+    </div>
+  
+
+    
+
+     <script>
+        $(function() {
+            $('ul li').mouseover(function() {
+                var index = $(this).index();
+                console.log(index);
+                $('.d1 div').eq(index).show();
+
+                $('.d1 div').eq(index).siblings("div").hide();
+            })
+    
+        
+
+        })
+     </script>
+</body>
+</html>

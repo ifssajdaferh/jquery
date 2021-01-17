@@ -1,0 +1,25 @@
+.nav > li {
+  float: left;
+  width: 51px;
+  height: 200px;
+  list-style: none;
+  text-align: center;
+  line-height: 32px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.nav ul {
+  padding: 0px;
+  width: 50px;
+  height: 151px;
+  display: none;
+}
+.nav ul li {
+  list-style: none;
+  border: 1px solid yellow;
+  text-align: center;
+  line-height: 32px;
+  margin: 0 auto;
+}

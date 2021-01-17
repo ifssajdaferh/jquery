@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery学习 </title>
+ 
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+        <style>
+            .d1{
+                width: 200px;
+                height: 200px;
+                background-color: cyan;
+                border: 1px solid black;
+            }
+        </style>
+
+</head>
+<body>
+  <button>hide</button>
+    <button>show</button>
+  
+    <button>toggle</button>
+  
+     <div class="d1">
+
+     </div>
+
+    
+
+     <script>
+        $(function() {
+            $('button:first').click(function() {
+       $('.d1').hide(1000);
+            })
+  
+
+            $('button:eq(1)').click(function() {
+       $('.d1').show(1000,function () {
+           alert('这是一个show方法执行完毕的回调函数！');
+       });
+            })
+
+
+            $('button:last').click(function() {
+       $('.d1').toggle(500);
+            })
+        })
+
+          
+
+     </script>
+</body>
+</html>
