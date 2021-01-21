@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery学习 </title>
+ 
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+        <style>
+    /* btn{
+        
+    } */
+    ul{
+        width: 50px;
+        height: 100px;
+    }
+    li{
+width: 49px;
+height: 30px;
+list-style: none;
+border: 1px solid cyan;
+text-align: center;
+line-height: 30px;
+    }
+    li a{
+        width: 49px;
+height: 30px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .d1{
+        width: 450px;
+        height: 450px;
+        border: 1px dashed black;
+        background-color: black;
+       
+    }
+    .d1 div{
+        width: 150px;
+        height: 90px;
+    }
+    .d1 img{
+        width: 150px;
+        height: 90px;
+    }
+    .d1 div{
+    margin: 10px;
+    float: left;
+    }
+        </style>
+</head>
+<body>
+ 
+    <div class="d1">
+        <div><a href="#"><img src="img/loginbg.png" alt=""></a></div>
+        <div><a href="#"><img src="img/logo.png" alt=""></a></div>
+        <div><a href="#"><img src="img/icons.png" alt=""></a>  </div>
+    </div>
+  
+
+    
+
+     <script>
+        $(function() {
+        $(".d1 div").hover(function() {
+            $(this).siblings().stop().fadeTo(1000,0.2);
+        },function() {
+            $(this).siblings().stop().fadeTo(1000,1);
+        });
+
+        })
+     </script>
+</body>
+</html>

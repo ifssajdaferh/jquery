@@ -76,13 +76,30 @@
 
      <script>
         $(function() {
-           $('.nav>li').mouseover(function(){
-           $(this).children('ul').show();
-           })
+         //   1常规写法
+         //   $('.nav>li>a').mouseover(function(){
+         //    //   show方法没有视觉效果 此处置换
+         //   $(this).siblings('ul').slideDown(200);
 
-           $('.nav>li').mouseout(function(){
-        //    $('.nav>li>ul').hide();
-           })
+         //   })
+
+         //   $('.nav>li>a').mouseout(function(){
+         //   $(this).siblings('ul').slideUp(200);
+         //   })
+         // 2使用hover事件挂载
+         // $('.nav>li>a').hover(function(){
+         //    $(this).siblings('ul').slideDown(200);
+         // },function(){
+         //    $(this).siblings('ul').slideUp(200);
+
+         // })
+       // 3使用hover事件挂载  另一种格式以及slidetoggle（）
+                     $('.nav>li>a').hover(function() {
+                        $(this).siblings('ul').stop().slideToggle(200);
+                     });   
+
+
+
         })
      </script>
 </body>

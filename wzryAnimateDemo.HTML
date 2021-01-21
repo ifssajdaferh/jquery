@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery学习 </title>
+ 
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+        <style>
+            .wrap{
+                position: relative;
+                width: 772px;
+                height: 105.8px;
+                background-color: rgba(193, 210, 240, 0.2);
+                border: 1px dashed green;
+                margin: 0 auto;
+
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+                width: 772px;
+                height: 105.8px;
+                position: absolute;
+                left: 0;
+              
+            
+            }
+            li{
+                float: left;
+                
+                position: relative;
+                bottom: -36px;
+                list-style: none;
+                width: 69px;
+                height: 69px;
+                margin: 0 8px;
+
+                /* overflow: hidden; */
+            }
+         
+
+            li img:first-child{ 
+                 position: absolute;
+                width: 224px;
+                height: 69px;
+
+            }
+            
+            li img:last-child{ 
+                 position: absolute;
+                width: 69px;
+                height: 69px;
+
+            }
+          
+        </style>
+</head>
+<body>
+
+
+      <div class="wrap">
+          <ul>
+              <li class="l1">
+                  <a href="#">
+                      <img src="./img-wzry/113-freehover.png" alt="" class="big i1">
+                      <img src="./img-wzry/113.jpg" alt="" class="small i2">
+                  </a>
+              </li>
+
+              <li>
+                <a href="#">
+                    <img src="./img-wzry/113-freehover.png" alt="" class="big">
+                    <img src="./img-wzry/113.jpg" alt="" class="small">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img-wzry/113-freehover.png" alt="" class="big">
+                    <img src="./img-wzry/113.jpg" alt="" class="small">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img-wzry/113-freehover.png" alt="" class="big">
+                    <img src="./img-wzry/113.jpg" alt="" class="small">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img-wzry/113-freehover.png" alt="" class="big">
+                    <img src="./img-wzry/113.jpg" alt="" class="small">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img-wzry/113-freehover.png" alt="" class="big">
+                    <img src="./img-wzry/113.jpg" alt="" class="small"> 
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img-wzry/113-freehover.png" alt="" class="big">
+                    <img src="./img-wzry/113.jpg" alt="" class="small">
+                </a>
+            </li>
+          </ul>
+          
+      </div>
+
+    
+
+     <script>
+        $(function() {
+            // $("li").eq(0).hover();
+// 初始化
+            $('.l1').css("width","224");
+            $(".i2").stop().fadeOut();
+            $('ul li').find(".big").stop().fadeOut();
+            $(".i1").stop().fadeIn();
+            $('ul li').mouseenter(function() {
+              
+                                                     //  自己怎么做
+                                                   
+
+                                                
+                //         // li变长    
+                // $(this).stop().animate({
+                //     width:224,
+
+                // },1000)
+
+
+
+                //         //  图片变长
+                // $(this).find("img").eq(0).stop().animate({
+                //     width:224
+                    
+                // },500)
+                //         // 自己不需要的图片消失
+                // $(this).find("img").eq(1).fadeOut();
+
+// 当前小li宽度变为224，同时小图片淡出，大图片淡入
+                                $(this).stop().animate({
+                    width:224
+
+                },500).find('.small').stop().fadeOut();
+                // $(this).find('.big').stop().animate({
+                //     width: 224
+                    
+                // });
+                $(this).find('.big').stop().fadeIn();
+  // 当前小li宽度变为69，同时小图片淡入，大图片淡出
+  $(this).siblings("li").stop().animate({
+                    width: 69
+
+                },500);
+
+                $(this).siblings("li").find('.big').stop().animate({
+                    width: 69
+                }).stop().fadeOut();
+
+                $(this).siblings("li").find('.small').stop().fadeIn();
+
+                                                     // 兄弟结构该怎么做
+                                                  
+                //         //   兄弟li变短
+                // $(this).siblings().stop().animate({
+                //     width:69,
+                    
+                // },500)
+
+
+                //     // 兄弟li内的第一张大图变短
+                //          $(this).siblings().find("img").eq(0).stop().animate({
+                               
+                               
+                //                width:69,
+                           
+                //            },500)
+
+
+                //         //   兄弟li内的第二张小图显示
+                //            $(this).siblings().find("img").eq(1).animate({
+                               
+                               
+                //                display:block,
+                           
+                //            },500)
+
+                    
+                
+
+
+            })
+        })
+
+          
+
+     </script>
+</body>
+</html>
