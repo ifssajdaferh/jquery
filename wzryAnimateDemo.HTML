@@ -114,32 +114,14 @@
      <script>
         $(function() {
             // $("li").eq(0).hover();
-// 初始化
+//事件触发前的 初始化（第一个li img1 img2搞特殊 ）
             $('.l1').css("width","224");
             $(".i2").stop().fadeOut();
             $('ul li').find(".big").stop().fadeOut();
             $(".i1").stop().fadeIn();
+// 事件迭代绑定
             $('ul li').mouseenter(function() {
-              
-                                                     //  自己怎么做
-                                                   
 
-                                                
-                //         // li变长    
-                // $(this).stop().animate({
-                //     width:224,
-
-                // },1000)
-
-
-
-                //         //  图片变长
-                // $(this).find("img").eq(0).stop().animate({
-                //     width:224
-                    
-                // },500)
-                //         // 自己不需要的图片消失
-                // $(this).find("img").eq(1).fadeOut();
 
 // 当前小li宽度变为224，同时小图片淡出，大图片淡入
                                 $(this).stop().animate({
@@ -163,35 +145,7 @@
 
                 $(this).siblings("li").find('.small').stop().fadeIn();
 
-                                                     // 兄弟结构该怎么做
-                                                  
-                //         //   兄弟li变短
-                // $(this).siblings().stop().animate({
-                //     width:69,
-                    
-                // },500)
-
-
-                //     // 兄弟li内的第一张大图变短
-                //          $(this).siblings().find("img").eq(0).stop().animate({
-                               
-                               
-                //                width:69,
-                           
-                //            },500)
-
-
-                //         //   兄弟li内的第二张小图显示
-                //            $(this).siblings().find("img").eq(1).animate({
-                               
-                               
-                //                display:block,
-                           
-                //            },500)
-
-                    
-                
-
+                                                 
 
             })
         })
